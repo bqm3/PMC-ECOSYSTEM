@@ -16,7 +16,7 @@ import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { AntDesign } from "@expo/vector-icons";
 import adjust from "../../constants/adjust";
-import QRCodeScreen from "../QrCodeScreen";
+import QRCodeScreen from "./QrCodeScreen";
 
 const ScanScreen = () => {
   const [isScan, setIsScan] = useState(false);
@@ -48,7 +48,6 @@ const ScanScreen = () => {
           { text: "Xác nhận", onPress: () => console.log("OK Pressed") },
         ]
       );
-      setIsScan(false);
       toggleModalQr(false, 1);
     }
 

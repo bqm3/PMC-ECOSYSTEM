@@ -83,15 +83,16 @@ const LoginScreen = ({ navigation }) => {
   // 4 3 3
 
   const handleSubmit = async () => {
-    if (data?.UserName === "" || data?.Password === "") {
-      Alert.alert("PMC Thông báo", "Thiếu thông tin đăng nhập", [
-        { text: "Xác nhận", onPress: () => console.log("OK Pressed") },
-      ]);
-    } else {
-      dispatch(login(data?.UserName, data?.Password));
-      await AsyncStorage.setItem("UserName", data?.UserName);
-      await AsyncStorage.setItem("Password", data?.Password);
-    }
+    // if (data?.UserName === "" || data?.Password === "") {
+    //   Alert.alert("PMC Thông báo", "Thiếu thông tin đăng nhập", [
+    //     { text: "Xác nhận", onPress: () => console.log("OK Pressed") },
+    //   ]);
+    // } else {
+    //   dispatch(login(data?.UserName, data?.Password));
+    //   await AsyncStorage.setItem("UserName", data?.UserName);
+    //   await AsyncStorage.setItem("Password", data?.Password);
+    // }
+    navigation.navigate("MultipleScreen")
   };
 
   // useEffect(() => {
@@ -194,7 +195,7 @@ const LoginScreen = ({ navigation }) => {
         >
           <BottomSheetModalProvider>
             <ImageBackground
-              source={require("../../assets/images/background_01.jpg")}
+              source={require("../../assets/images/PMCEcosystemBg1.png")}
               resizeMode="cover"
               style={styles.defaultFlex}
             >
